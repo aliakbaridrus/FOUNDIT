@@ -76,6 +76,17 @@
                            required>
                 </div>
 
+                <div class="flex items-start gap-2.5">
+                    <input type="checkbox" name="agree_terms" id="agree_terms" required
+                           class="mt-0.5 w-4 h-4 rounded border-slate-300 text-brand focus:ring-brand/30 cursor-pointer">
+                    <label for="agree_terms" class="text-sm text-txt-secondary leading-snug cursor-pointer">
+                        I agree to the
+                        <a href="{{ route('terms') }}" target="_blank" class="text-brand font-medium hover:underline">Terms of Service</a>
+                        and
+                        <a href="{{ route('privacy') }}" target="_blank" class="text-brand font-medium hover:underline">Privacy Policy</a>
+                    </label>
+                </div>
+
                 <button type="submit"
                         class="w-full btn-primary py-3.5 text-white font-bold rounded-xl shadow-lg shadow-brand/20 transition-all text-sm">
                     Create Account
