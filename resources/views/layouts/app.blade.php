@@ -194,7 +194,7 @@
         <div class="flex items-center gap-6 text-xs text-txt-secondary">
             <a href="{{ route('privacy') }}" class="hover:text-brand transition">Privacy</a>
             <a href="{{ route('terms') }}" class="hover:text-brand transition">Terms</a>
-            <a href="#" class="hover:text-brand transition">Contact</a>
+            <a href="https://wa.me/6287820199533" target="_blank" class="hover:text-brand transition">Contact</a>
         </div>
 
     </div>
