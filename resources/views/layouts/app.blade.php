@@ -114,8 +114,67 @@
                 </a>
             @endauth
 
+            <!-- Tombol Hamburger (hanya tampil di mobile) -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-txt-secondary" aria-label="Buka menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+
         </div>
 
+    </div>
+
+    <!-- Menu Mobile (dropdown, tampil saat tombol hamburger diklik) -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+        <div class="px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+
+            <a href="{{ route('home') }}"
+               class="{{ request()->routeIs('home') ? 'text-brand font-semibold' : 'text-txt-secondary' }}">
+                Home
+            </a>
+
+            <a href="{{ route('items.explore') }}"
+               class="{{ request()->routeIs('items.explore') ? 'text-brand font-semibold' : 'text-txt-secondary' }}">
+                Explore
+            </a>
+
+            <a href="{{ route('items.create') }}"
+               class="{{ request()->routeIs('items.create') ? 'text-brand font-semibold' : 'text-txt-secondary' }}">
+                Post Item
+            </a>
+
+            @auth
+                @if (auth()->user()->isAdmin())
+                    <a href="{{ route('admin.dashboard') }}"
+                       class="{{ request()->routeIs('admin.dashboard') ? 'text-brand font-semibold' : 'text-txt-secondary' }}">
+                        Admin Dashboard
+                    </a>
+                @else
+                    <a href="{{ route('dashboard') }}"
+                       class="{{ request()->routeIs('dashboard') ? 'text-brand font-semibold' : 'text-txt-secondary' }}">
+                        Dashboard
+                    </a>
+                @endif
+
+                <a href="{{ route('profile') }}" class="flex items-center gap-2 text-brand font-medium">
+                    <i data-lucide="user" class="w-4 h-4"></i>
+                    {{ auth()->user()->first_name }}
+                </a>
+
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="flex items-center gap-2 text-red-500 font-medium">
+                        <i data-lucide="log-out" class="w-4 h-4"></i>
+                        Logout
+                    </button>
+                </form>
+            @else
+                <a href="{{ route('login') }}" class="flex items-center gap-2 text-brand font-medium">
+                    <i data-lucide="log-in" class="w-4 h-4"></i>
+                    Login
+                </a>
+            @endauth
+
+        </div>
     </div>
 
 </nav>
@@ -146,6 +205,22 @@
 
 <script>
     lucide.createIcons();
+
+    // Toggle menu mobile
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // Ganti ikon hamburger <-> X saat menu dibuka/ditutup
+        const icon = menuBtn.querySelector('i');
+        if (mobileMenu.classList.contains('hidden')) {
+            icon.setAttribute('data-lucide', 'menu');
+        } else {
+            icon.setAttribute('data-lucide', 'x');
+        }
+        lucide.createIcons();
+    });
 </script>
 
 @stack('scripts')
