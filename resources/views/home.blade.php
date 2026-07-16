@@ -101,4 +101,59 @@
 
 </section>
 
+<section class="max-w-[1200px] mx-auto px-6 pb-16">
+    <div class="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+        <div class="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr]">
+            <div class="bg-white p-8 lg:p-10 text-txt">
+                <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-slate-700 mb-6">
+                    FoundIt
+                </div>
+
+                <div class="rounded-[28px] border border-slate-200 bg-slate-50 p-6 lg:p-7">
+                    <p class="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 mb-4">Nama Anggota</p>
+                    <div class="space-y-2 text-sm leading-7 text-slate-700">
+                        <p>1. Muhammad Ali Akbar - 2024080128</p>
+                        <p>2. Thoriq Ziyad Rohman - 2024080139</p>
+                        <p>3. William - 20240801372</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-8 lg:p-10 flex flex-col justify-center">
+                <div class="rounded-[28px] border border-slate-200 bg-white p-6 lg:p-7 shadow-sm">
+                    <p class="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 mb-4">Detail Kelas</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm text-slate-700">
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">Mata Kuliah</p>
+                            <p class="font-medium">Pemrograman Web</p>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">Dosen Pengampu</p>
+                            <p class="font-medium leading-relaxed">Devi Setiawati, A.Md., S.Pd., M.T.Kom</p>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">Kelas</p>
+                            <p class="font-medium">KH002</p>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">Tahun Akademik</p>
+                            <p class="font-medium">2025/2026 Genap</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="{{ route('privacy') }}" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:text-slate-900 hover:bg-slate-50">Privacy</a>
+                        <a href="{{ route('terms') }}" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:text-slate-900 hover:bg-slate-50">Terms</a>
+                        <a href="https://wa.me/6287820199533" target="_blank" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:text-slate-900 hover:bg-slate-50">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection

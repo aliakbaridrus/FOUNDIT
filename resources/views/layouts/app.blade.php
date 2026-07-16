@@ -183,6 +183,7 @@
     @yield('content')
 </main>
 
+@unless(request()->routeIs('home'))
 <footer class="bg-white border-t border-slate-100">
 
     <div class="max-w-[1200px] mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -200,6 +201,7 @@
     </div>
 
 </footer>
+@endunless
 
 </div>
 

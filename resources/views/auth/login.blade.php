@@ -58,38 +58,6 @@
 
         </div>
 
-        <footer class="mt-6 rounded-3xl bg-brand text-white shadow-lg shadow-brand/20 overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/15">
-                <div class="p-5">
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-3">Nama Anggota</p>
-                    <ol class="space-y-1.5 text-sm text-white/95 leading-relaxed">
-                        <li>1. Muhammad Ali Akbar - 2024080128</li>
-                        <li>2. Thoriq Ziyad Rohman - 2024080139</li>
-                        <li>3. William - 20240801372</li>
-                    </ol>
-                </div>
-
-                <div class="p-5">
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-3">Mata Kuliah</p>
-                    <p class="text-sm text-white/95">Pemrograman Web</p>
-
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mt-5 mb-3">Dosen Pengampu</p>
-                    <p class="text-sm text-white/95 leading-relaxed">Devi Setiawati, A.Md., S.Pd., M.T.Kom</p>
-                </div>
-
-                <div class="p-5">
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-3">Kelas</p>
-                    <p class="text-sm text-white/95 mb-4">KH002</p>
-
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-3">Domain</p>
-                    <p class="text-sm text-white/95 mb-4">www.foundit.web.id</p>
-
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-3">Tahun Akademik</p>
-                    <p class="text-sm text-white/95">2025/2026 Genap</p>
-                </div>
-            </div>
-        </footer>
-
         <a href="{{ route('home') }}"
            class="flex items-center justify-center gap-2 mt-8 text-sm text-txt-secondary hover:text-brand transition-colors">
             <i data-lucide="arrow-left" class="w-4 h-4"></i>
