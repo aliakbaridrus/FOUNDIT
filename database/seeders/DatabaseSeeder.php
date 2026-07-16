@@ -13,23 +13,31 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $admin = User::create([
-            'first_name' => 'Admin',
-            'last_name' => 'FoundIt',
-            'email' => 'admin@foundit.test',
-            'whatsapp' => '087820199533',
-            'role' => 'admin',
-            'password' => bcrypt('password'),
-        ]);
+        $admin = User::updateOrCreate(
+            ['email' => 'admin@foundit.test'],
+            [
+                'first_name' => 'Admin',
+                'last_name' => 'FoundIt',
+                'whatsapp' => '087820199533',
+                'role' => 'admin',
+                'password' => bcrypt('password'),
+            ]
+        );
 
-        $user = User::create([
-            'first_name' => 'Test',
-            'last_name' => 'User',
-            'email' => 'user@foundit.test',
-            'whatsapp' => '081234567890',
-            'role' => 'user',
-            'password' => bcrypt('password'),
-        ]);
+        $user = User::updateOrCreate(
+            ['email' => 'user@foundit.test'],
+            [
+                'first_name' => 'Test',
+                'last_name' => 'User',
+                'whatsapp' => '081234567890',
+                'role' => 'user',
+                'password' => bcrypt('password'),
+            ]
+        );
+
+        if (Item::count() > 0) {
+            return;
+        }
 
         $items = [
             [
