@@ -25,7 +25,7 @@
                 <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">{{ $item->category }}</span>
                 <span class="text-txt-secondary text-sm flex items-center gap-1.5">
                     <i data-lucide="calendar" class="w-4 h-4"></i>
-                    {{ $item->created_at->format('d M Y') }}
+                    {{ $item->created_at?->format('d M Y') ?? 'Unknown date' }}
                 </span>
             </div>
 
