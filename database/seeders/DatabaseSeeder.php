@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             'first_name' => 'Admin',
             'last_name' => 'FoundIt',
             'email' => 'admin@foundit.test',
+            'whatsapp' => '087820199533',
         ]);
 
         $user = User::factory()->create([
